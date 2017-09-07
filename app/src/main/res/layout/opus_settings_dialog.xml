@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- author: Julian Howes -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#736f6e"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="true"
+        android:stretchColumns="false" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/profile"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/sp_opus_profile"
+                style="spinnerStyle"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:dropDownWidth="125dp"
+                android:entries="@array/opus_profile_values"
+                android:paddingLeft="20dp"
+                android:spinnerMode="dropdown" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/frame_length"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/sp_opus_framelength"
+                style="spinnerStyle"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:dropDownWidth="125dp"
+                android:entries="@array/opus_framelength_values"
+                android:paddingLeft="20dp"
+                android:spinnerMode="dropdown" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="SAMP. RATE "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/sp_opus_samprate"
+                style="spinnerStyle"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:dropDownWidth="125dp"
+                android:entries="@array/opus_samprate_values"
+                android:paddingLeft="20dp"
+                android:spinnerMode="dropdown" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/cb_opus_fec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FEC" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="20dp" >
+
+        <Button
+            android:id="@+id/btn_aac_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/btn_aac_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply" />
+    </LinearLayout>
+
+</LinearLayout>
